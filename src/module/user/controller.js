@@ -13,9 +13,10 @@ const login = async (data) => {
   // password compare
   if (!compare(password, user.password)) return null;
   delete user.password;
-
+  
   // create token with encrypted data
   user.token = createToken(encrypt(JSON.stringify(user)));
+  delete user.id;
   return user;
 };
 
