@@ -1,7 +1,10 @@
-const {User} = require("../../db/models")
+const { User } = require("../../db/models");
 
-const register = async (data) => {
-    await User.create(data)
-}
+const create = async (data) => {
+  return await User.create(data);
+};
+const get = async (data) => {
+  return await User.findOne({ raw: true, where: data });
+};
 
-module.exports = {register}
+module.exports = { create, get };

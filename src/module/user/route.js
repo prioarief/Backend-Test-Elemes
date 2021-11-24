@@ -1,14 +1,12 @@
-const express = require('express');
-const wrapper = require('../../utilities/wrapper');
+const express = require("express");
 const router = express.Router();
-const request = require('./request');
+const request = require("./request");
 
-router.post('/register', async (req, res) => {
-	return await request.register(req, res);
+router.post("/register", async (req, res) => {
+  return await request.register(req, res);
 });
-
-router.get('/', (req, res) => {
-	res.send('haloooo');
+router.post("/login", async (req, res) => {
+  return await request.login(req, res);
 });
 
 module.exports = router;
