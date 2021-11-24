@@ -13,7 +13,7 @@ const userRoute = async (req, res, next) => {
     if (error.name == "TokenExpiredError") {
       return wrapper(res, false, null, "Token Expired", 401);
     }
-    return wrapper(res, false, null, "Invalid", 401);
+    return wrapper(res, false, null, "Invalid token", 401);
   }
 };
 

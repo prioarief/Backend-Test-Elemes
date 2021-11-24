@@ -17,6 +17,10 @@ module.exports = {
       price: {
         type: Sequelize.INTEGER
       },
+      is_delete: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0
+      },
       thumbnail: {
         type: Sequelize.STRING
       },
