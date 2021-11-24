@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 
 const hash = (val) => {
-    const salt = bcrypt.genSaltSync(process.env.saltRounds);
+    const salt = bcrypt.genSaltSync(parseInt(process.env.saltRounds));
 	return bcrypt.hashSync(val, salt);
 };
 const compare = (val, hash) => {

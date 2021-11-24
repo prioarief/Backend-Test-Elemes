@@ -45,6 +45,7 @@ const login = async (req, res) => {
     return wrapper(res, true, user, null, 200);
   } catch (error) {
     console.log(error);
+    return wrapper(res, false, null, "server error", 500);
   }
 };
 
