@@ -1,9 +1,10 @@
 const express = require("express");
+const { adminRoute } = require("../../middlewares/jwt");
 const upload = require("../../utilities/multer");
 const router = express.Router();
 const request = require("./request");
 
-router.post("/", upload.single("thumbnail"), async (req, res) => {
+router.post("/", adminRoute, upload.single("thumbnail"), async (req, res) => {
   return await request.post(req, res);
 });
 router.get("/", async (req, res) => {
@@ -12,10 +13,10 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   return await request.get(req, res);
 });
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", adminRoute, async (req, res) => {
   return await request.destroy(req, res);
 });
-router.put("/:id", async (req, res) => {
+router.put("/:id", adminRoute, async (req, res) => {
   return await request.update(req, res);
 });
 
