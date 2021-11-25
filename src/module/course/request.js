@@ -27,12 +27,17 @@ const post = async (req, res) => {
 const gets = async (req, res) => {
   try {
     const schema = Joi.object({
-      sort: Joi.string().valid("ASC", "DESC"),
+      price: Joi.string().valid("lowest", "highest", "free"),
       q: Joi.string(),
     });
 
     const { error, value } = schema.validate(req.query);
     if (error) return wrapper(res, false, null, error.message, 400);
+    if (value.price === "lowest") {
+      value.price = "ASC";
+    } else if (value.price === "highest") {
+      value.price = "DESC";
+    }
     const courses = await controller.gets(value);
     return wrapper(res, true, courses, null, 200);
   } catch (error) {

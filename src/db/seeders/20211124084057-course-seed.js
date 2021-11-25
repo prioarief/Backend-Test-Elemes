@@ -18,14 +18,13 @@ module.exports = {
           name: "Data Science Course",
           price: 5000000,
           category_id: 1,
-          thumbnail: "https://i.ytimg.com/vi/cVxELmATmOU/sddefault.jpg",
+          thumbnail:"https://res.cloudinary.com/dzixosfnz/image/upload/v1637809932/course/kkmnozxi0zerlauyoxws.webp",
         },
         {
           name: "Math Beginner Course",
           price: 3000000,
           category_id: 2,
-          thumbnail:
-            "https://5.imimg.com/data5/HF/DC/GLADMIN-37672513/mental-maths-course-500x500.png",
+          thumbnail:"https://res.cloudinary.com/dzixosfnz/image/upload/v1637809932/course/kkmnozxi0zerlauyoxws.webp",
         },
       ],
       {}
