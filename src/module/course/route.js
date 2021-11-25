@@ -1,8 +1,9 @@
 const express = require("express");
+const upload = require("../../utilities/multer");
 const router = express.Router();
 const request = require("./request");
 
-router.post("/", async (req, res) => {
+router.post("/", upload.single("thumbnail"), async (req, res) => {
   return await request.post(req, res);
 });
 router.get("/", async (req, res) => {
