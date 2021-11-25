@@ -6,6 +6,7 @@ const post = async (req, res) => {
   try {
     const schema = Joi.object({
       category: Joi.string().required(),
+      is_popular: Joi.number().valid(0, 1).required()
     });
 
     const { error, value } = schema.validate(req.body);
@@ -19,10 +20,11 @@ const post = async (req, res) => {
 const gets = async (req, res) => {
   try {
     const schema = Joi.object({
-      category: Joi.string(),
+      is_popular: Joi.number().valid(0, 1),
     });
 
     const { error, value } = schema.validate(req.query);
+    if (error) return wrapper(res, false, null, error.message, 400);
     const category = await controller.gets(value);
     return wrapper(res, true, category, null, 200);
   } catch (error) {
@@ -48,6 +50,7 @@ const update = async (req, res) => {
     const schema = Joi.object({
       id: Joi.string(),
       category: Joi.string().required(),
+      is_popular: Joi.number().valid(0, 1).required()
     });
 
     const { error, value } = schema.validate({ ...req.params, ...req.body });

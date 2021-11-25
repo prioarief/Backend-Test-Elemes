@@ -12,6 +12,7 @@ const gets = async (data) => {
   return await CourseCategory.findAll({
     raw: true,
     where: {
+      ...data,
       is_delete: 0,
     },
   });

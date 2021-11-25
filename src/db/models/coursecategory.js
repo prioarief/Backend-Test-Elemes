@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       category: DataTypes.STRING,
       is_delete: DataTypes.INTEGER,
+      is_popular: DataTypes.INTEGER,
     },
     {
       sequelize,
