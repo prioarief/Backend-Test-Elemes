@@ -16,13 +16,13 @@ module.exports = {
       [
         {
           role: "Admin",
-          createdAt: Date.now(),
-          updatedAt: Date.now(),
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           role: "User",
-          createdAt: Date.now(),
-          updatedAt: Date.now(),
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       ],
       {}

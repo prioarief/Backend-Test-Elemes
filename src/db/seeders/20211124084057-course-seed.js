@@ -20,8 +20,8 @@ module.exports = {
           category_id: 1,
           thumbnail:
             "https://res.cloudinary.com/dzixosfnz/image/upload/v1637809932/course/kkmnozxi0zerlauyoxws.webp",
-          createdAt: Date.now(),
-          updatedAt: Date.now(),
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           name: "Math Beginner Course",
@@ -29,8 +29,8 @@ module.exports = {
           category_id: 2,
           thumbnail:
             "https://res.cloudinary.com/dzixosfnz/image/upload/v1637809932/course/kkmnozxi0zerlauyoxws.webp",
-          createdAt: Date.now(),
-          updatedAt: Date.now(),
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       ],
       {}
