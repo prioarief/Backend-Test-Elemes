@@ -11,12 +11,16 @@ const update = async (data) => {
 const gets = async (data) => {
   return await Course.findAll({
     raw: true,
-    ...(["ASC", "DESC"].includes(data.price) && { order: [["price", data.price]] }),
+    ...(["ASC", "DESC"].includes(data.price) && {
+      order: [["price", data.price]],
+    }),
     where: {
+      is_delete: 0,
       ...(data.q && {
         name: { [Op.substring]: data.q },
       }),
-      ...(!["ASC", "DESC"].includes(data.price) && data.price && { price: { [Op.eq]: 0 } }),
+      ...(!["ASC", "DESC"].includes(data.price) &&
+        data.price && { price: { [Op.eq]: 0 } }),
       ...(["ASC", "DESC"].includes(data.price) && { price: { [Op.ne]: 0 } }),
     },
     include: [{ model: CourseCategory, attributes: ["category"] }],

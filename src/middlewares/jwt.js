@@ -20,7 +20,7 @@ const adminRoute = async (req, res, next) => {
   try {
     const isValid = jwt.verify(req.headers.authorization, process.env.JWT_KEY);
     const user = await userService.get({ id: decrypt(isValid?.id) });
-    if (user.role_id !== 1 || user["Role.role"].toLowerCase() !== "Admin")
+    if (user.role_id !== 1 || user["Role.role"].toLowerCase() !== "admin")
       return wrapper(res, false, null, "access denied", 403);
     req.decoded = user;
     next();
