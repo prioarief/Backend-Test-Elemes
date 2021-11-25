@@ -17,12 +17,16 @@ module.exports = {
         {
           name: "John Doe",
           email: "JohnDoe@gmail.com",
-          password: bcrypt.hash("rahas!a")
+          password: bcrypt.hash("rahas!a"),
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
         },
         {
           name: "Doe John",
           email: "DoeJohn@gmail.com",
-          password: bcrypt.hash("rahas!a")
+          password: bcrypt.hash("rahas!a"),
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
         },
       ],
       {}

@@ -18,13 +18,19 @@ module.exports = {
           name: "Data Science Course",
           price: 5000000,
           category_id: 1,
-          thumbnail:"https://res.cloudinary.com/dzixosfnz/image/upload/v1637809932/course/kkmnozxi0zerlauyoxws.webp",
+          thumbnail:
+            "https://res.cloudinary.com/dzixosfnz/image/upload/v1637809932/course/kkmnozxi0zerlauyoxws.webp",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
         },
         {
           name: "Math Beginner Course",
           price: 3000000,
           category_id: 2,
-          thumbnail:"https://res.cloudinary.com/dzixosfnz/image/upload/v1637809932/course/kkmnozxi0zerlauyoxws.webp",
+          thumbnail:
+            "https://res.cloudinary.com/dzixosfnz/image/upload/v1637809932/course/kkmnozxi0zerlauyoxws.webp",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
         },
       ],
       {}

@@ -16,9 +16,13 @@ module.exports = {
       [
         {
           category: "Coding",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
         },
         {
           category: "Math",
+          updatedAt: Date.now(),
+          updatedAt: Date.now(),
         },
       ],
       {}

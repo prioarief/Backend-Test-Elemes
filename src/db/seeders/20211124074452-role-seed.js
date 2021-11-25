@@ -16,9 +16,13 @@ module.exports = {
       [
         {
           role: "Admin",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
         },
         {
           role: "User",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
         },
       ],
       {}
