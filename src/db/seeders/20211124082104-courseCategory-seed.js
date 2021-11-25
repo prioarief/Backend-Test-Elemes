@@ -21,7 +21,7 @@ module.exports = {
         },
         {
           category: "Math",
-          updatedAt: new Date(),
+          createdAt: new Date(),
           updatedAt: new Date(),
         },
       ],
